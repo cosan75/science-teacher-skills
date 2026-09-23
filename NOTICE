@@ -9,3 +9,8 @@ The Common Core State Standards included in these reference files are used under
 내어쓰기(F4)·source_card 구분자 수정은 social-teacher-skills
 (https://github.com/newskool4d-sketch/social-teacher-skills, Apache-2.0,
 Copyright 2026 social-teacher-skills contributors)에서 가져왔다 — 커밋 62865ec, 초등 부분만.
+
+초등 국어과 레퍼런스(plugin/skills/*/references/korean.md, korean-domains/, korean-text-sourcing.md,
+curriculum-kr-mcp.md의 국어 절), 국어 파일럿(pilot/korean-*), evals/ko12-lesson-planning/rubrics/korean.csv는
+korean-teacher-skills(https://github.com/pblsketch/korean-teacher-skills, Apache-2.0,
+Copyright 2026 korean-teacher-skills contributors)에서 가져왔다 — 커밋 d1b1a5e, 초등 부분만.
