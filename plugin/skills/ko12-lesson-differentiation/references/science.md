@@ -10,7 +10,7 @@ SPDX-License-Identifier: Apache-2.0
 
 # 과학 — 차별화 pedagogy
 
-`ko12-lesson-differentiation`이 로드하는 유일한 과목 레퍼런스.
+`ko12-lesson-differentiation`에서 과목이 **과학**일 때 로드된다 (SKILL.md 과목 레지스트리).
 
 ## 원본 수업 확인
 

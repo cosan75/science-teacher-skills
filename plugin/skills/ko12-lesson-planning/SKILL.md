@@ -9,7 +9,9 @@ description: >
   준비해야 하는데") 모두에서 발동한다. 핵심 신호: 교사가 새 수업 자료 생성을 필요로 한다.
   수준별·단계별 자료를 포함한 새 수업도 하나의 설계 요청이다 — 이 스킬이 그 자료까지 수업
   패키지 안에서 만든다. 기존 수업의 차별화(별도 스킬 영역)나 지문 수준 조정에는 쓰지 않는다.
-  ※ 이 스킬은 과학 전용이다 — 다른 과목은 다루지 않는다.
+  평가 문항(서논술형·채점 기준)에서 출발해 그 문항에 이르는 수업을 역설계하는 요청에도
+  발동한다("이 문항으로 수업안 만들어 줘"). 과목은 SKILL.md의 과목 레지스트리가 정한다 —
+  준비된(ready) 과목만 완전 지원한다.
 license: Complete terms in LICENSE
 ---
 
@@ -26,8 +28,8 @@ SPDX-License-Identifier: Apache-2.0
 
 Produces a teacher-ready, standards-aligned lesson plan + student-facing materials + teacher
 observation template as editable 한글(HWPX) documents in a single output turn, rendered from one material-source JSON via
-bundled scripts. The science pedagogy and output mapping live in
-`references/science.md`. Works with or without the Korean curriculum learning-map MCPs
+bundled scripts. Each subject's pedagogy and output mapping live in its own
+reference file (`references/<subject>.md`), chosen by the subject registry in Step 0. Works with or without the Korean curriculum learning-map MCPs
 (한국 교육과정 학습맵 — 초등·중등).
 
 "The teacher" throughout this skill is the user you are talking with — the same person, never
@@ -53,26 +55,49 @@ Teacher language only — name what the teacher is getting, never tool names, fi
 
 ## Step 0 — Route (silent, before anything else)
 
-1. **Subject.** Determine whether the requested lesson is science, from the prompt and any
-   prior conversation:
+1. **Subject.** Determine the subject from the prompt and any prior conversation, then look
+   it up in the **subject registry** below. The registry is the single list of subjects this
+   skill knows; its status column decides what happens next.
 
-   - **science** — 현상, 실험·탐구, 물리·화학·생명과학·지구과학, 통합과학, 과학탐구실험, 코드 `[4과…]`·`[9과…]`·`[10통과…]`
+   | 과목 | 신호 (주제·코드) | 레퍼런스 | 상태 |
+   |---|---|---|---|
+   | 과학 | 현상, 실험·탐구, 물리·화학·생명과학·지구과학, 통합과학, 과학탐구실험, `[4과…]`·`[6과…]`·`[9과…]`·`[10통과…]` | `references/science.md` | ready |
+   | 국어 | 읽기·쓰기·듣기·말하기·문법·문학·매체, `[2국…]`·`[4국…]`·`[6국…]`·`[9국…]` | `references/korean.md` | planned |
+   | 수학 | 수와 연산, 변화와 관계, 도형과 측정, 자료와 가능성, `[2수…]`·`[4수…]`·`[6수…]`·`[9수…]` | `references/math.md` | planned |
+   | 사회 | 지리·역사·일반사회, 지역·민주주의·경제, `[4사…]`·`[6사…]`·`[9사…]`·`[9역…]` | `references/social.md` | planned |
+   | 도덕 | 자신·타인·사회·공동체·자연과의 관계, `[4도…]`·`[6도…]`·`[9도…]` | `references/ethics.md` | planned |
+   | 영어 | 이해·표현, 듣기·읽기·말하기·쓰기, `[4영…]`·`[6영…]`·`[9영…]` | `references/english.md` | planned |
+   | 실과 | 생활·기술·디지털(소프트웨어), `[6실…]` | `references/practical-arts.md` | planned |
+   | 통합교과 | 바른 생활·슬기로운 생활·즐거운 생활, 초1–2, `[2바…]`·`[2슬…]`·`[2즐…]` | `references/integrated.md` | planned |
+   | 체육 | 움직임·건강·스포츠, `[4체…]`·`[6체…]`·`[9체…]` | `references/pe.md` | planned |
+   | 음악 | 연주·창작·감상, `[4음…]`·`[6음…]`·`[9음…]` | `references/music.md` | planned |
+   | 미술 | 미적 체험·표현·감상, `[4미…]`·`[6미…]`·`[9미…]` | `references/art.md` | planned |
 
-   Then read the reference file NOW:
+   Then act on the status:
 
-   - science → `references/science.md`
-   - 과학이 아닌 과목 → **범위 밖.** 이 스킬은 과학 전용이다. 교사에게
-     알리고(예: *"이 도구는 과학 수업 설계 전용이에요."*)
-     과학 수업으로 도울 일이 있는지 묻는다. 과학이 아니면 이 스킬 밖에서 일반 지식으로 돕되,
-     확인되지 않은 성취기준 코드는 인용하지 않는다.
+   - **ready** → read that reference file NOW.
+   - **planned** (파일이 아직 없음) → **범위 밖으로 처리한다.** 교사에게 알린다(예:
+     *"국어 수업 설계는 아직 준비 중이에요 — 지금은 과학 수업을 완전히 지원해요."*). 이 스킬
+     밖에서 일반 지식으로 돕는 것은 괜찮지만, 확인되지 않은 성취기준 코드는 인용하지 않고
+     과학 레퍼런스를 다른 과목에 빌려 쓰지 않는다 — 과목 pedagogy가 다르다.
+   - 레지스트리에 없는 과목 → planned와 같게 처리한다.
+
+   **새 과목을 켜는 방법** (유지보수자용, 교사에게 말하지 않는다): `python tools/new_subject.py
+   <slug> <과목명>`으로 두 스킬에 뼈대를 만들고 `_subject-template.md`의 안내대로 채운 뒤,
+   두 스킬(`ko12-lesson-planning`, `ko12-lesson-differentiation`)의 이 표에서 상태를 함께
+   `ready`로 바꾼다. `tests/check_subjects.py`가 두 표의 일치와 ready 과목 파일의 완성을 검사한다.
 
    **Loading the reference file is mandatory.** Drafting a lesson without first
-   reading `references/science.md` is a critical failure. The reference file carries the
+   reading the subject's reference file is a critical failure. The reference file carries the
    complete subject-specific instructions: clarify priorities, curriculum branching,
    grade-band structures, section structure, non-negotiables, and the lesson.json mapping.
-   Treat the loaded reference as your full skill instructions for this turn. If it is
-   genuinely ambiguous whether the request is a science lesson, ask about it
-   in Step 1.
+   Treat the loaded reference as your full skill instructions for this turn. If the subject
+   is genuinely ambiguous (예: 과학·실과 경계의 "식물 기르기"), ask about it in Step 1.
+
+   **Entry point — 평가 문항에서 출발.** 교사가 평가 문항(서논술형 문항, 채점 기준, 루브릭,
+   성취수준)을 주고 "이 문항으로 가는 수업"을 요청하면, 과목 레퍼런스에 더해
+   `references/from-assessment.md`도 NOW 읽는다. 그 파일이 Step 1–3에서 문항을 수업의
+   도착점으로 쓰는 방법을 정한다. 과목이 planned면 위 처리가 우선한다.
 
 2. **Textbook.** 한국은 국가 교육과정 단일 체제이지만 교과서는 검정제다 — 출판사마다 단원
    전개가 다르다. 교사가 출판사·교과서를 언급해도 그 교과서의 활동·지문·삽화·문항을 재현하지
@@ -99,8 +124,8 @@ toward the 0–2. When nothing needs clarifying, the offer is asked on its own.
 
 ## Step 2 — Ground in standards
 
-**If a learning-map MCP is connected:** follow the science section in
-`references/curriculum-kr-mcp.md` — call BEFORE drafting; not calling when connected is a
+**If a learning-map MCP is connected:** follow the subject's section in
+`references/curriculum-kr-mcp.md` (a subject without its own section uses the *과목 공통* sequence there) — call BEFORE drafting; not calling when connected is a
 critical failure. Extract only what each call specifies, then proceed directly to Step 3 — do
 not summarize findings in chat.
 
