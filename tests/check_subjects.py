@@ -9,7 +9,9 @@
   R2  ready 과목은 두 스킬 모두에 레퍼런스 파일이 있다
   R3  ready 과목 파일에 템플릿 자리표시(`{{`, `✍`)가 남아 있지 않다
   R4  ready 과목 파일이 필수 절 제목을 갖는다
-  R5  references/에 레지스트리에도 공용 파일 목록에도 없는 .md가 없다 (고아 파일)
+  R5  references/에 레지스트리에도 공용 파일 목록에도 없는 .md가 없다 (고아 파일).
+      ready 과목의 보조 파일은 `<slug>-*.md` / `<slug>-*/` 이름이면 그 과목 소유로 본다
+      (예: korean-text-sourcing.md, korean-domains/) — 보조 파일에도 R3를 적용한다
   R6  공용 파일(템플릿·학습맵 시퀀스·역설계)이 있다
 
 planned 과목에 초안 파일이 있는 것은 허용한다(작성 중) — 알림만 출력한다.
@@ -78,9 +80,18 @@ def main() -> int:
             elif path.is_file():
                 notes.append(f"{skill.name}/{filename}: planned 과목 '{subject}' 초안 작성 중")
 
-        for md in ref.glob("*.md"):
-            if md.name not in listed and md.name not in COMMON[skill]:
-                errors.append(f"R5 {skill.name}/{md.name}: 레지스트리에 없는 과목 파일")
+        ready_slugs = [f[:-3] for _, f, st in rows if st == "ready"]
+        for md in ref.rglob("*.md"):
+            rel = md.relative_to(ref).as_posix()
+            if rel in listed or rel in COMMON[skill]:
+                continue
+            owner = next((sl for sl in ready_slugs if rel.startswith(sl + "-")), None)
+            if owner is None:
+                errors.append(f"R5 {skill.name}/{rel}: 레지스트리에 없는 과목 파일")
+                continue
+            body = md.read_text(encoding="utf-8")
+            if "{{" in body or "✍" in body:
+                errors.append(f"R3 {skill.name}/{rel}: 템플릿 자리표시가 남아 있음")
 
     ready = [s for s, _, st in rows if st == "ready"]
     print(f"과목 레지스트리: {len(rows)}개 (ready {len(ready)}: {', '.join(ready)})")

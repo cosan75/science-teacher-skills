@@ -9,6 +9,16 @@ SPDX-License-Identifier: Apache-2.0
 버전은 [SemVer](https://semver.org/lang/ko/)를 따른다. 수치를 주장하는 항목은 반드시
 `evals/runs/`의 실채점 기록을 가리킨다 — 측정 없이 수정 없다.
 
+## [Unreleased] — 초등 국어 (2026-09-23)
+
+### Added
+- **국어(초등) ready** — korean-teacher-skills(Apache-2.0, d1b1a5e)에서 초1–6만 이식: 허브 `korean.md`,
+  영역 파일 6종 `korean-domains/`, 제재 조달 `korean-text-sourcing.md`(두 스킬), `curriculum-kr-mcp.md`
+  초등 국어 절, 파일럿 `korean-elementary-literature`([6국05-02])·`korean-elementary-lower-reading`
+  ([2국02-01]), `evals/.../korean.csv`. NOTICE 출처 표기.
+- 레지스트리에 `중·고 국어`(planned, `korean-secondary.md`) 행 분리.
+- `check_subjects.py` — ready 과목 보조 파일(`<slug>-*.md`, `<slug>-*/`) 소유 인정 + 자리표시 검사.
+
 ## [Unreleased] — 초등 사회 (2026-09-23)
 
 ### Added

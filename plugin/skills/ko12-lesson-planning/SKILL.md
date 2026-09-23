@@ -62,7 +62,8 @@ Teacher language only — name what the teacher is getting, never tool names, fi
    | 과목 | 신호 (주제·코드) | 레퍼런스 | 상태 |
    |---|---|---|---|
    | 과학 | 현상, 실험·탐구, 물리·화학·생명과학·지구과학, 통합과학, 과학탐구실험, `[4과…]`·`[6과…]`·`[9과…]`·`[10통과…]` | `references/science.md` | ready |
-   | 국어 | 읽기·쓰기·듣기·말하기·문법·문학·매체, `[2국…]`·`[4국…]`·`[6국…]`·`[9국…]` | `references/korean.md` | planned |
+   | 국어(초등) | 초1–6 국어 6영역 — 듣기·말하기·읽기·쓰기·문법·문학·매체, `[2국…]`·`[4국…]`·`[6국…]` | `references/korean.md` | ready |
+   | 중·고 국어 | 중학교 국어, 공통국어1·2, 국어 선택 9과목, `[9국…]`·`[10공국…]`·`[12…]` | `references/korean-secondary.md` | planned |
    | 수학 | 수와 연산, 변화와 관계, 도형과 측정, 자료와 가능성, `[2수…]`·`[4수…]`·`[6수…]`·`[9수…]` | `references/math.md` | planned |
    | 사회(초등) | 초3–6 사회 — 고장·지역, 국토, 역사 성격 영역, 민주주의·경제, `[4사…]`·`[6사…]` | `references/social.md` | ready |
    | 중·고 사회·역사 | 중학교 사회·역사, 통합사회, 한국사, 사회 선택과목, `[9사…]`·`[9역…]`·`[10통사…]`·`[10한사…]` | `references/social-secondary.md` | planned |
@@ -78,7 +79,7 @@ Teacher language only — name what the teacher is getting, never tool names, fi
 
    - **ready** → read that reference file NOW.
    - **planned** (파일이 아직 없음) → **범위 밖으로 처리한다.** 교사에게 알린다(예:
-     *"국어 수업 설계는 아직 준비 중이에요 — 지금은 과학과 초등 사회 수업을 완전히 지원해요."*). 이 스킬
+     *"수학 수업 설계는 아직 준비 중이에요 — 지금은 과학, 초등 사회, 초등 국어 수업을 완전히 지원해요."*). 이 스킬
      밖에서 일반 지식으로 돕는 것은 괜찮지만, 확인되지 않은 성취기준 코드는 인용하지 않고
      과학 레퍼런스를 다른 과목에 빌려 쓰지 않는다 — 과목 pedagogy가 다르다.
    - 레지스트리에 없는 과목 → planned와 같게 처리한다.
