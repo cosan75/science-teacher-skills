@@ -19,3 +19,6 @@ Copyright 2026 korean-teacher-skills contributors)에서 가져왔다 — 커밋
 evals/ko12-lesson-planning/rubrics/math.csv는 이 포크에서 새로 썼으며, 구조와 핵심 장치(문제 구조 사례
 열거, 오개념 판별 정리 문항, 선수 학습으로 끌어올리기, CRA 진입점)는 anthropics/k12-teacher-skills의
 math.md(Apache-2.0, Copyright 2026 Anthropic, PBC · Learning Commons)에서 가져왔다.
+
+초1–2 통합교과 레퍼런스(plugin/skills/*/references/integrated.md, curriculum-kr-mcp.md의 통합교과 절)와
+evals/ko12-lesson-planning/rubrics/integrated.csv는 이 포크의 오리지널 작성물이다(원본에 대응 과목 없음).

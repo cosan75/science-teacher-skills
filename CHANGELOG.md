@@ -9,6 +9,16 @@ SPDX-License-Identifier: Apache-2.0
 버전은 [SemVer](https://semver.org/lang/ko/)를 따른다. 수치를 주장하는 항목은 반드시
 `evals/runs/`의 실채점 기록을 가리킨다 — 측정 없이 수정 없다.
 
+## [Unreleased] — 통합교과 (2026-09-23)
+
+### Added
+- **통합교과 ready**(초1–2, 이 포크 작성) — `references/integrated.md`(수업 설계·차별화), `curriculum-kr-mcp.md`
+  통합교과 절(실측: officialText는 원문 요약, `[2건…]` 건강한 생활 2028 적용 예정 → 범위 밖), 파일럿
+  `integrated-village-map`([2슬02-01]+[2바02-01] 우리 마을 지도 놀이, 수업 3종 + 차별화 4종), `evals/.../integrated.csv` 7항목.
+
+### Changed
+- 과학·사회 레퍼런스의 초1–2 특례가 통합교과로 연결된다.
+
 ## [Unreleased] — 초등 수학 + KCBC 역설계 2호 (2026-09-23)
 
 ### Added
