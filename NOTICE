@@ -1,3 +1,11 @@
 © 2010 National Governors Association Center for Best Practices and Council of Chief State School Officers. All rights reserved.
 
 The Common Core State Standards included in these reference files are used under the public license available at: https://www.thecorestandards.org/public-license/
+
+---
+
+초등 사회과 레퍼런스(plugin/skills/*/references/social.md, curriculum-kr-mcp.md의 사회 절),
+사회 파일럿(pilot/social-*), evals/ko12-lesson-planning/rubrics/social.csv, 렌더러의 목록
+내어쓰기(F4)·source_card 구분자 수정은 social-teacher-skills
+(https://github.com/newskool4d-sketch/social-teacher-skills, Apache-2.0,
+Copyright 2026 social-teacher-skills contributors)에서 가져왔다 — 커밋 62865ec, 초등 부분만.
