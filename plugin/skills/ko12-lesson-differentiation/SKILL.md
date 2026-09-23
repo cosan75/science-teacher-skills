@@ -57,7 +57,8 @@ SPDX-License-Identifier: Apache-2.0
    | 과학 | 현상, 실험·탐구, 물리·화학·생명과학·지구과학, 통합과학, 과학탐구실험, `[4과…]`·`[6과…]`·`[9과…]`·`[10통과…]` | `references/science.md` | ready |
    | 국어(초등) | 초1–6 국어 6영역 — 듣기·말하기·읽기·쓰기·문법·문학·매체, `[2국…]`·`[4국…]`·`[6국…]` | `references/korean.md` | ready |
    | 중·고 국어 | 중학교 국어, 공통국어1·2, 국어 선택 9과목, `[9국…]`·`[10공국…]`·`[12…]` | `references/korean-secondary.md` | planned |
-   | 수학 | 수와 연산, 변화와 관계, 도형과 측정, 자료와 가능성, `[2수…]`·`[4수…]`·`[6수…]`·`[9수…]` | `references/math.md` | planned |
+   | 수학(초등) | 초1–6 수학 — 수와 연산, 변화와 관계, 도형과 측정, 자료와 가능성, `[2수…]`·`[4수…]`·`[6수…]` | `references/math.md` | ready |
+   | 중·고 수학 | 중학교 수학, 공통수학, 수학 선택과목, `[9수…]`·`[10공수…]`·`[12…]` | `references/math-secondary.md` | planned |
    | 사회(초등) | 초3–6 사회 — 고장·지역, 국토, 역사 성격 영역, 민주주의·경제, `[4사…]`·`[6사…]` | `references/social.md` | ready |
    | 중·고 사회·역사 | 중학교 사회·역사, 통합사회, 한국사, 사회 선택과목, `[9사…]`·`[9역…]`·`[10통사…]`·`[10한사…]` | `references/social-secondary.md` | planned |
    | 도덕 | 자신·타인·사회·공동체·자연과의 관계, `[4도…]`·`[6도…]`·`[9도…]` | `references/ethics.md` | planned |
@@ -70,7 +71,7 @@ SPDX-License-Identifier: Apache-2.0
 
    - **ready** → 그 레퍼런스 파일을 **지금 읽는다**.
    - **planned**(파일이 아직 없음)나 레지스트리에 없는 과목 → **범위 밖.** 교사에게 알리고(예:
-     *"수학 수업 차별화는 아직 준비 중이에요 — 지금은 과학, 초등 사회, 초등 국어 수업을 완전히 지원해요."*) 도울 일이
+     *"영어 수업 차별화는 아직 준비 중이에요 — 지금은 과학과 초등 사회·국어·수학 수업을 완전히 지원해요."*) 도울 일이
      있는지 묻는다. 과학 레퍼런스를 다른 과목에 빌려 쓰지 않는다.
 
    **레퍼런스 파일 로드는 필수다.** 이 파일이 Step 1·3의 pedagogy를 싣고 있다 —
@@ -286,7 +287,7 @@ JSON의 `shared` 블록에 **한 번만** 쓰고 각 문서는 `{"type": "from_s
        {type: phase_header, name, minutes}
        {type: table, headers[]?, rows[[]], empty_row_height_pt?}
        {type: fill_table, headers[], blank_rows: int, row_height_pt?}
-       {type: number_line, min, max, ticks?, marks[]?}
+       {type: number_line, min, max, ticks?, marks[]?, labels?: "ends"}
        {type: source_card, title, author?, date?, origin?, excerpt}
        {type: cards, items[{title, text}]} | {type: workspace, size: small|med|large, height_pt?}
        {type: group, blocks[]} | {type: columns, left[], right[]} | {type: page_break}

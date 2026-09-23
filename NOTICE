@@ -14,3 +14,8 @@ Copyright 2026 social-teacher-skills contributors)에서 가져왔다 — 커밋
 curriculum-kr-mcp.md의 국어 절), 국어 파일럿(pilot/korean-*), evals/ko12-lesson-planning/rubrics/korean.csv는
 korean-teacher-skills(https://github.com/pblsketch/korean-teacher-skills, Apache-2.0,
 Copyright 2026 korean-teacher-skills contributors)에서 가져왔다 — 커밋 d1b1a5e, 초등 부분만.
+
+초등 수학과 레퍼런스(plugin/skills/*/references/math.md, curriculum-kr-mcp.md의 수학 절)와
+evals/ko12-lesson-planning/rubrics/math.csv는 이 포크에서 새로 썼으며, 구조와 핵심 장치(문제 구조 사례
+열거, 오개념 판별 정리 문항, 선수 학습으로 끌어올리기, CRA 진입점)는 anthropics/k12-teacher-skills의
+math.md(Apache-2.0, Copyright 2026 Anthropic, PBC · Learning Commons)에서 가져왔다.

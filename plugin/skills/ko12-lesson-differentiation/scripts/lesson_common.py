@@ -581,8 +581,9 @@ def answer_profile(data: dict) -> tuple:
     shared = shared if isinstance(shared, dict) else {}
     # smps (Standards for Mathematical Practice) is the most reliable math signal — it is
     # math-only and the math reference mandates it, whereas shared.subject is often omitted.
-    is_math = bool(shared.get("smps")) or "math" in " ".join(str(x or "") for x in (
+    signals = " ".join(str(x or "") for x in (
         shared.get("subject"), data.get("eyebrow"), data.get("title"))).lower()
+    is_math = bool(shared.get("smps")) or "math" in signals or "수학" in signals
     if n <= 2:
         return 200.0, 40.0, 160.0, not is_math
     if n <= 5:

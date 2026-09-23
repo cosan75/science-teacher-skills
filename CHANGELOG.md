@@ -9,6 +9,18 @@ SPDX-License-Identifier: Apache-2.0
 버전은 [SemVer](https://semver.org/lang/ko/)를 따른다. 수치를 주장하는 항목은 반드시
 `evals/runs/`의 실채점 기록을 가리킨다 — 측정 없이 수정 없다.
 
+## [Unreleased] — 초등 수학 + KCBC 역설계 2호 (2026-09-23)
+
+### Added
+- **수학(초등) ready** — 이 포크에서 작성. `references/math.md`(수업 설계·차별화), `curriculum-kr-mcp.md`
+  초등 수학 절(학습맵 실측: soft edge = 코드 순서 후보, officialText 꼬리 결함), 파일럿
+  `math-fraction-compare`([4수01-11] 분수 크기 비교, 수업 3종 + 차별화 4종), `evals/.../math.csv` 8항목.
+  레지스트리에 `중·고 수학`(planned) 행 분리.
+- 파일럿 `kcbc-social-q1` — KCBC 사회 1번 문항에서 역설계한 [4사10-01] 수업(문항지·채점 기준 포함 6종).
+
+### Changed
+- 렌더러: `shared.subject` "수학" 인식(초1–5 풀이 공간 줄 없음), `number_line` `labels: "ends"`와 분수 눈금 표기.
+
 ## [Unreleased] — 초등 국어 (2026-09-23)
 
 ### Added
