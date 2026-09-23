@@ -236,7 +236,7 @@ plugin/
   성취기준·평가 요소·채점 기준을 구조화해 두었으므로, 그 산출물을 이 스킬의 입력으로 받으면 두
   프로젝트가 파이프라인이 된다. (c) 과목 중립 — 문항 해부(요구 사고·수준 경계)는 교과와 무관하게
   같은 절차다.
-- **검증**: `evals/ko12-lesson-planning/rubrics/from_assessment.csv` A1–A5 (조건부 — 역설계 요청에만
+- **검증**: `evals/ko12-lesson-planning/rubrics/from_assessment.csv` A1–A6 (조건부 — 역설계 요청에만
   적용). 파일럿: 과학 서논술형 문항 1건 → 수업 1건으로 1차 검증 예정.
 - **재검토 조건**: 교사들이 문항 1개가 아니라 **평가 계획 전체**(여러 문항·여러 차시)를 주는 사용이
   주류가 되면, A6의 "핵심 차시 1개 + 흐름표"를 단원 계획 산출물로 격상한다.
@@ -328,5 +328,5 @@ plugin/
 | evals/runs/ | 실채점 기록 — 판정 JSON(항목별 근거 포함) + 집계표 + `aggregate.py` | **1차 실행 완료 (2026-08-06)**: 파일럿 4패키지 × planning 40항목 = 160칸, PASS 149 / FAIL 6 / skip 5. fail 6건 재대조 결과 5건 실결함·1건(O3) 판정자 편차. 한계는 pilot-notes 참조 — 판정자 1명/패키지, pass 재대조 안 함, 고교 0건, M3 판정 불가, differentiation 루브릭 미채점 |
 | plugin/skills/*/SKILL.md Step 0 과목 레지스트리 | 과목 → 레퍼런스 라우팅, ready/planned (ADR-7) | 2026-09-23. 두 스킬 사본 동일 — `tests/check_subjects.py`가 검사 |
 | plugin/skills/*/references/_subject-template.md | 새 과목 레퍼런스 뼈대 (science.md 절 구조 1:1) | 2026-09-23. `tools/new_subject.py`가 복사 |
-| plugin/skills/ko12-lesson-planning/references/from-assessment.md | 평가 문항 → 수업 역설계 규칙 A1–A6 (ADR-8) | 2026-09-23 초안, 파일럿 대기 |
-| evals/ko12-lesson-planning/rubrics/from_assessment.csv | 역설계 산출물 채점 A1–A5 (조건부) | 2026-09-23 초안, 미채점 |
+| plugin/skills/ko12-lesson-planning/references/from-assessment.md | 평가 문항 → 수업 역설계 규칙 A1–A7 (ADR-8) | 2026-09-23 초안, 파일럿 대기 |
+| evals/ko12-lesson-planning/rubrics/from_assessment.csv | 역설계 산출물 채점 A1–A6 (조건부) | 2026-09-23 초안, 미채점 |
