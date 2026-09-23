@@ -1,12 +1,18 @@
-# science-teacher-skills
+# science-teacher-skills (다과목 확장 포크)
 
-**한국 2022 개정 교육과정 기반 과학 수업 설계 Claude 스킬 (v0.2.0-preview.1)**
+**한국 2022 개정 교육과정 기반 수업 설계 Claude 스킬 — 과학 완성, 다과목 확장 준비**
+
+> 이 저장소는 [raphysicst-create/science-teacher-skills](https://github.com/raphysicst-create/science-teacher-skills)의
+> 포크입니다. 원본은 과학 전용이고, 이 포크는 같은 뼈대 위에 **다른 과목**과 **평가 문항에서
+> 출발하는 수업 설계**를 얹습니다. 원본의 변경은 `upstream` 리모트로 계속 받아옵니다.
 
 Anthropic의 [k12-teacher-skills](https://github.com/anthropics/k12-teacher-skills)를 한국
 초·중등 체제로 이식했습니다. 성취기준·선수관계·세부 학습 주제는 한국 교육과정 학습맵 MCP
 2종에서 가져오고, 수업 자료는 편집 가능한 **한글(HWPX) 문서**로 나옵니다.
 
-> 이 플러그인은 **과학 전용**입니다. 다른 과목은 다루지 않습니다.
+> 지금 완전히 지원하는 과목은 **과학**입니다. 국어·수학·사회·도덕·영어·실과·통합교과·체육·
+> 음악·미술은 과목 레지스트리에 `planned`로 등록되어 있고, 하나씩 켜 나갑니다 — 준비되지 않은
+> 과목을 요청하면 스킬이 안내하고 멈춥니다(과학 방식으로 대충 만들지 않습니다).
 
 ## 무엇을 만드나
 
@@ -32,7 +38,7 @@ Anthropic의 [k12-teacher-skills](https://github.com/anthropics/k12-teacher-skil
 Claude Code에서 두 줄이면 됩니다.
 
 ```
-/plugin marketplace add raphysicst-create/science-teacher-skills
+/plugin marketplace add cosan75/science-teacher-skills
 /plugin install science-teacher-skills@science-teacher-skills
 ```
 
@@ -55,6 +61,14 @@ Claude Code에서 두 줄이면 됩니다.
 ```
 이 수업을 우리 반 수준에 맞게 세 단계로 나눠 줘
 ```
+
+```
+이 서논술형 문항(채점 기준 첨부)으로 가는 4학년 수업안 만들어 줘
+```
+
+세 번째처럼 **평가 문항을 주면** 그 문항을 도착점으로 수업을 거꾸로 설계합니다 — 문항 자체는
+수업에서 쓰지 않고(학생이 처음 보는 문항 앞에서 스스로 해내도록), 같은 사고를 다른 소재로
+기르며, 정리 문항은 문항의 축소판, 관찰 포인트는 채점 기준의 수업 중 번역이 됩니다.
 
 학년·주제만 있으면 됩니다. 성취기준 코드(`[9과12-01]`)를 알고 있으면 그대로 써도 됩니다.
 학습맵이 연결되지 않은 상태에서도 동작하며, 그 경우 수업안에 안내 문구가 붙습니다.
@@ -96,4 +110,19 @@ MCP), 과목 pedagogy(NGSS 3차원 → 2022 개정 내용 체계 3범주), 교�
 | 2 | HWPX 산출 — OWPML 직접 생성 어댑터, 한컴 실열림 전수 검증 | ✅ 완료 (2026-08-01) |
 | 3 | 수업 차별화 스킬 포팅 (✅ 2026-08-01), 마켓플레이스 배포·설치 검증, HWPX 기본화 | ✅ 완료 (2026-08-03) |
 
-설계 근거와 결정 기록은 [DESIGN.md](DESIGN.md)에 있습니다.
+| 4 | (포크) 다과목 확장 준비 — 과목 레지스트리, 과목 템플릿, 정합 검사기 | ✅ 준비 완료 (2026-09-23) |
+| 5 | (포크) 평가 문항 → 수업 역설계 진입 | 🟡 규칙·루브릭 초안, 파일럿 대기 |
+| 6 | (포크) 과목별 레퍼런스 작성 — 권장 순서 수학 → 국어 → 사회 → 통합교과 | ⏳ |
+
+설계 근거와 결정 기록은 [DESIGN.md](DESIGN.md)에 있습니다(다과목은 ADR-7, 역설계는 ADR-8).
+
+## 새 과목 추가하기
+
+```bash
+python tools/new_subject.py math 수학      # 두 스킬에 뼈대 생성
+# references/math.md 2종을 science.md를 기준으로 채운다 (✍ 안내 지우기)
+python tests/check_subjects.py            # 레지스트리·파일 정합 검사
+# 통과하면 두 SKILL.md 레지스트리에서 수학을 ready로
+```
+
+과목을 켜는 완료 기준: 과목 파일 2종 + 파일럿 수업 1건이 CI 렌더·검사 통과 + 현직 교사 검토.

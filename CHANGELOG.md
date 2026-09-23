@@ -9,6 +9,26 @@ SPDX-License-Identifier: Apache-2.0
 버전은 [SemVer](https://semver.org/lang/ko/)를 따른다. 수치를 주장하는 항목은 반드시
 `evals/runs/`의 실채점 기록을 가리킨다 — 측정 없이 수정 없다.
 
+## [Unreleased] — 다과목 확장 포크 (cosan75)
+
+### Added
+- **과목 레지스트리** — 두 SKILL.md Step 0에 과목 | 신호 | 레퍼런스 | 상태(ready/planned) 표.
+  과학 ready, 국어·수학·사회·도덕·영어·실과·통합교과·체육·음악·미술 planned (DESIGN.md ADR-7).
+- `references/_subject-template.md` (두 스킬) — science.md 절 구조 1:1 새 과목 뼈대.
+- `tools/new_subject.py` — 두 스킬에 과목 뼈대 생성.
+- `tests/check_subjects.py` + CI 단계 — 레지스트리 사본 일치, ready 파일 완성도, 고아 파일 검사.
+- **평가 문항 → 수업 역설계 진입** — `references/from-assessment.md` 규칙 A1–A6 (ADR-8),
+  `evals/ko12-lesson-planning/rubrics/from_assessment.csv` A1–A5 (조건부, 미채점).
+- `curriculum-kr-mcp.md` — 전용 절이 없는 과목을 위한 *과목 공통 호출 시퀀스* 안내.
+
+### Changed
+- "과학 전용" 문구 제거 — planned 과목은 안내 후 범위 밖 처리, 과학 레퍼런스 차용 금지.
+- 차별화 SKILL.md 제목·eyebrow 형식을 과목 중립(`[학년] [과목] · [코드]`)으로.
+- 마켓플레이스 homepage·설치 명령을 포크(cosan75)로.
+
+측정 없음 — 과학 산출물 경로는 바뀌지 않았다(렌더러·스키마 무수정, 파일럿 4종 DoD·HWPX 품질
+검사 26파일 FAIL 0 로컬 확인).
+
 ## [0.3.0-preview.1] — 2026-08-08
 
 ### 바뀜 — HWPX 렌더러 (두 스킬 공통, 사본 동일)

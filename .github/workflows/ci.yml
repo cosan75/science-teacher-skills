@@ -36,6 +36,10 @@ jobs:
                 "plugin/skills/ko12-lesson-differentiation/scripts/$f"
           done
 
+      # 두 스킬의 과목 레지스트리가 같고, ready 과목 파일이 완성돼 있는지 (DESIGN.md ADR-7)
+      - name: 과목 레지스트리 정합
+        run: python tests/check_subjects.py
+
       - name: 스모크 렌더 + 한글 무결성
         run: |
           bash plugin/skills/ko12-lesson-planning/scripts/render_all.sh \
