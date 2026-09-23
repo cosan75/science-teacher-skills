@@ -9,6 +9,18 @@ SPDX-License-Identifier: Apache-2.0
 버전은 [SemVer](https://semver.org/lang/ko/)를 따른다. 수치를 주장하는 항목은 반드시
 `evals/runs/`의 실채점 기록을 가리킨다 — 측정 없이 수정 없다.
 
+## [Unreleased] — 초등 사회 (2026-09-23)
+
+### Added
+- **사회(초등) ready** — social-teacher-skills(Apache-2.0, 62865ec)에서 초3–6 부분만 이식:
+  `references/social.md`(두 스킬), `curriculum-kr-mcp.md` 초등 사회 절, 파일럿 `social-elementary`
+  ([4사09-01])·`social-random-elementary`([6사01-02]), `evals/.../social.csv`. NOTICE에 출처 표기.
+- 레지스트리에 `중·고 사회·역사`(planned, `social-secondary.md`) 행 분리.
+
+### Fixed
+- 렌더러: 번호 라벨 문단 목록 내어쓰기(F4), source_card 메타 구분자 `—`→`·` (social-teacher-skills에서).
+  과학 파일럿 포함 45개 문서 DoD·HWPX 품질 FAIL 0.
+
 ## [Unreleased] — 다과목 확장 포크 (cosan75)
 
 ### Added

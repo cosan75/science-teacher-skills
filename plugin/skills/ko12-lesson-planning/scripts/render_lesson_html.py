@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # Copyright 2026 Anthropic, PBC
 # Copyright 2026 Learning Commons
+# Copyright 2026 social-teacher-skills contributors
 # SPDX-License-Identifier: Apache-2.0
 
 """Render lesson JSON -> a styled, self-contained HTML preview (the teacher-facing view).
@@ -189,7 +190,7 @@ def render_block(blk: dict, theme: Theme) -> str:
                           if blk.get(k))
         title = md(blk.get("title", ""))
         excerpt = md(blk.get("excerpt") or blk.get("text") or "")
-        meta = f"<span class=\"sc-meta\"> — {bits}</span>" if bits else ""
+        meta = f"<span class=\"sc-meta\"> · {bits}</span>" if bits else ""
         return (f"<div class=\"sourcecard\"><div class=\"sc-head\"><b>{title}</b>{meta}</div>"
                 f"<div class=\"sc-body\">{excerpt}</div></div>")
     if t == "fill_table":
