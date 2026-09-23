@@ -1,0 +1,884 @@
+{
+  "shared": {
+    "grade": "Grade 3 · 초등학교 3학년",
+    "subject": "수학",
+    "duration": 40,
+    "standard_code": "[4수01-11]",
+    "standard_text": "분모가 같은 분수끼리, 단위분수끼리 크기를 비교하고 그 방법을 설명할 수 있다.",
+    "anchor_task": {
+      "teacher": [
+        "칠판에 같은 길이의 직사각형 두 개를 그리고 '같은 크기의 김밥 두 줄'이라고 적는다. 나누는 선은 긋지 않는다.",
+        "문제를 소리 내어 읽어 준다. 무엇을 묻는지, 무엇을 알고 있는지만 학생 말로 확인한다.",
+        "\"그림으로 풀어도, 말로 풀어도 좋아요\"라고 먼저 말한다. 푸는 방법은 알려 주지 않는다.",
+        "누가 더 많이 먹었는지 손으로 먼저 정하게 한다(5초). 어느 쪽이 많았는지는 칠판에 적어 두기만 한다."
+      ],
+      "student": {
+        "type": "callout",
+        "kind": "student-task",
+        "label": "김밥 문제",
+        "text": "크기가 같은 김밥이 두 줄 있어요. 민서네 모둠은 한 줄을 똑같이 3도막으로 잘라 1도막을 먹었어요. 준호네 모둠은 다른 한 줄을 똑같이 5도막으로 잘라 1도막을 먹었어요. 누가 김밥을 더 많이 먹었을까요? 아래 김밥 그림을 나누어 나타내고, 그렇게 생각한 까닭을 쓰세요."
+      }
+    },
+    "strip_3": {
+      "type": "table",
+      "rows": [
+        [
+          "",
+          "",
+          ""
+        ]
+      ],
+      "row_height_pt": 40
+    },
+    "strip_5": {
+      "type": "table",
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "row_height_pt": 40
+    },
+    "strips_note": "위 김밥은 3도막, 아래 김밥은 5도막으로 나누어 놓았어요. 먹은 1도막씩에 색칠하세요.",
+    "fraction_line": {
+      "type": "number_line",
+      "min": 0,
+      "max": 1,
+      "ticks": 7,
+      "labels": "ends"
+    },
+    "p1": {
+      "teacher": "구조 사례: 분모가 같은 분수 비교(기본). 수직선의 눈금 7칸을 그대로 쓰는지 봅니다. 답: 5/7이 더 큽니다.",
+      "student": "수직선에 3/7과 5/7을 표시하세요. 둘 중 더 큰 분수는 무엇인가요?"
+    },
+    "p2": {
+      "teacher": "구조 사례: 분모가 같은 분수 세 개의 순서. '분모가 같으면 크기도 같다'는 생각이 여기서 드러납니다. 답: 2/9, 5/9, 7/9.",
+      "student": "2/9, 7/9, 5/9를 작은 분수부터 차례대로 쓰세요."
+    },
+    "p3": {
+      "teacher": "구조 사례: 단위분수 비교(가장 어려운 사례). 분모가 큰 1/8을 가장 크다고 쓰면 대표 오개념입니다. 답: 가장 큰 분수 1/2, 가장 작은 분수 1/8.",
+      "student": "1/2, 1/8, 1/4 중에서 가장 큰 분수와 가장 작은 분수를 쓰세요. 그렇게 생각한 까닭을 그림으로 나타내세요."
+    },
+    "p4": {
+      "teacher": "구조 사례: 방법 설명(성취기준의 '그 방법을 설명'). 두 방법을 섞어 쓰지 않는지 봅니다.",
+      "student": "분모가 같은 분수끼리 크기를 비교하는 방법과, 단위분수끼리 크기를 비교하는 방법을 각각 한 문장으로 쓰세요."
+    },
+    "exit_ticket": {
+      "teacher": "구조 사례: 단위분수 비교(가장 어려운 사례). '분모가 크면 더 크다'고 생각하는 학생은 1/6을 고르므로 이 문항을 틀립니다. 답: 1/4. 반으로 접어 걷습니다.",
+      "student": {
+        "type": "callout",
+        "kind": "student-task",
+        "label": "오늘의 정리",
+        "text": "1/6과 1/4 중에서 더 큰 분수는 무엇인가요? 그렇게 생각한 까닭을 쓰세요."
+      }
+    },
+    "exit_sort": {
+      "type": "cards",
+      "items": [
+        {
+          "title": "이해함",
+          "text": "1/4을 고르고, 같은 크기를 더 적게 나누면 한 조각이 크다는 까닭을 말이나 그림으로 댄다."
+        },
+        {
+          "title": "거의",
+          "text": "1/4을 골랐지만 까닭이 없거나 '4가 작아서'처럼 수의 크기만 말한다. 다음 차시 도입에서 김밥 그림을 다시 편다."
+        },
+        {
+          "title": "재지도 필요",
+          "text": "1/6을 고른다. 분모의 크기로 분수의 크기를 정하고 있다. 같은 길이의 종이 띠를 직접 접어 비교하게 한다."
+        }
+      ]
+    },
+    "vocabulary": {
+      "type": "table",
+      "rows": [
+        [
+          "**분모**",
+          "전체를 똑같이 몇으로 나누었는지 나타내는 수. 분수 막대의 아래에 쓴다."
+        ],
+        [
+          "**분자**",
+          "나눈 것 가운데 몇 개인지 나타내는 수."
+        ],
+        [
+          "**단위분수**",
+          "1/2, 1/3, 1/5처럼 분자가 1인 분수. 김밥 한 도막이 단위분수다."
+        ]
+      ]
+    },
+    "misconceptions": {
+      "type": "table",
+      "headers": [
+        "학생의 반응",
+        "그렇게 되는 이유",
+        "교사의 대응"
+      ],
+      "rows": [
+        [
+          "1/3과 1/5 중 1/5이 더 크다고 쓴다.",
+          "자연수에서 5가 3보다 크다는 습관을 분모에 그대로 쓴다.",
+          "두 김밥 그림을 나란히 놓고 한 도막씩의 길이를 손가락으로 재어 보게 한다. 정답을 말하지 않는다."
+        ],
+        [
+          "2/9와 7/9는 분모가 같으니 크기도 같다고 쓴다.",
+          "분모를 분수의 크기라고 생각하고 분자는 보지 않는다.",
+          "수직선의 눈금을 하나씩 세어 2/9와 7/9를 표시하게 한다."
+        ],
+        [
+          "짧게 그린 김밥의 1/3과 길게 그린 김밥의 1/5을 비교한다.",
+          "전체가 같아야 비교할 수 있다는 조건을 놓친다.",
+          "\"두 김밥은 크기가 같았지요?\"만 묻고 인쇄된 김밥 그림을 쓰게 한다."
+        ]
+      ]
+    },
+    "prerequisite_standard": "[4수01-09] 똑같이 나누어 분수를 이해하고 읽고 쓰기 (학습맵 코드 순서 후보)",
+    "sentence_frames": {
+      "type": "list",
+      "label": "다음 문장 지원을 쓸 수 있습니다",
+      "items": [
+        "나는 ____과 ____을 알아요. 모르는 것은 ____이에요.",
+        "____이 ____보다 커요. 왜냐하면 ____."
+      ]
+    },
+    "scaffold_a_p1": {
+      "type": "callout",
+      "kind": "student-note",
+      "label": "문제 1을 하기 전에 —",
+      "text": "수직선의 0에서 1까지가 7칸으로 나뉘어 있어요. 3/7은 0에서 몇 칸 간 곳일까요? 손가락으로 칸을 세어 보세요."
+    },
+    "ext_c": {
+      "teacher": "다 모둠에만 인쇄된다. 구조 통찰 — 단위분수 비교를 한 사례가 아니라 규칙으로 일반화한다. 정리 문항 앞에 둔다.",
+      "student": {
+        "type": "callout",
+        "kind": "student-task",
+        "label": "규칙 찾기",
+        "text": "1/2, 1/3, 1/4, 1/5, …처럼 분모가 1씩 커지는 단위분수를 계속 늘어놓으면 크기는 어떻게 될까요? 1/100은 1/99보다 클까요, 작을까요? 그렇게 생각한 까닭을 쓰세요."
+      }
+    },
+    "anchor_activity": {
+      "type": "callout",
+      "kind": "student-task",
+      "label": "분수 문제 만들기",
+      "text": "친구가 '분모가 크면 더 큰 분수'라고 잘못 생각하면 틀리게 되는 분수 비교 문제를 하나 만들고, 정답과 까닭을 쓰세요."
+    },
+    "reflect_prompt": {
+      "type": "callout",
+      "kind": "student-task",
+      "label": "되돌아보기",
+      "text": "오늘 어떤 방법으로 분수의 크기를 비교했나요? 왜 그 방법을 골랐나요?"
+    }
+  },
+  "documents": [
+    {
+      "id": "teacher_plan",
+      "audience": "teacher",
+      "eyebrow": "수학 · 초등학교 3학년 · 분수",
+      "title": "차별화 수업안 — 누가 더 많이 먹었을까",
+      "sections": [
+        {
+          "heading": "한눈에 보기",
+          "blocks": [
+            {
+              "type": "from_shared",
+              "key": "standard"
+            },
+            {
+              "type": "labeled",
+              "label": "앵커 문제",
+              "text": "같은 크기 김밥 두 줄 — 3도막 중 1도막과 5도막 중 1도막, 누가 더 먹었을까."
+            },
+            {
+              "type": "labeled",
+              "label": "학생 정보",
+              "text": "보편적 설계 기본값 적용 — 세 수준 모두 문장 지원과 어휘 지원."
+            },
+            {
+              "type": "callout",
+              "kind": "teacher-note",
+              "label": "수준 배정은 바뀔 수 있습니다",
+              "text": "지난 차시 분수 읽고 쓰기 결과로 정한 잠정 배정입니다. 문제 2 뒤의 중간 확인에서 다시 봅니다."
+            }
+          ]
+        },
+        {
+          "heading": "3범주 지도",
+          "blocks": [
+            {
+              "type": "labeled",
+              "label": "지식·이해",
+              "text": "같은 전체를 더 많이 나눌수록 한 조각이 작아진다."
+            },
+            {
+              "type": "labeled",
+              "label": "과정·기능",
+              "text": "그림과 수직선으로 분수를 나타내 비교하고 방법을 설명한다."
+            },
+            {
+              "type": "labeled",
+              "label": "가치·태도",
+              "text": "친구의 풀이를 자기 말로 다시 말한다."
+            },
+            {
+              "type": "labeled",
+              "label": "선수 학습",
+              "text": "[4수01-09] 똑같이 나누어 분수 이해하기 — 학습맵 코드 순서 후보. 기초 수준의 김밥 띠 진입점이 여기서 나온다."
+            },
+            {
+              "type": "labeled",
+              "label": "구조 사례",
+              "text": "분모가 같은 분수 비교(문제 1), 세 분수의 순서(문제 2), 단위분수 비교(김밥 문제·문제 3·정리 문항), 방법 설명(문제 4) — 세 수준 모두에 있다."
+            }
+          ]
+        },
+        {
+          "heading": "수준 편성",
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "기초(가 모둠): 분수를 그림 없이 읽기 어려워한 학생",
+                "보통(나 모둠): 분수를 그림과 이어 읽고 쓰는 학생",
+                "심화(다 모둠): 분수를 수직선에 스스로 표시하는 학생"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "근거: 지난 차시 [4수01-09] 정리 문항 결과. 자료가 없으면 기본 프로파일을 적용합니다."
+            }
+          ]
+        },
+        {
+          "heading": "문제 만나기와 풀이 나누기 — 전체 활동",
+          "blocks": [
+            {
+              "type": "from_shared",
+              "key": "anchor_task"
+            },
+            {
+              "type": "paragraph",
+              "text": "풀이 나누기(10분)는 세 모둠이 함께합니다. 1/5이 크다고 쓴 학생의 풀이를 두 번째로 발표시키고 생각-짝-나누기로 동의·반대를 정하게 합니다."
+            }
+          ]
+        },
+        {
+          "heading": "연습 — 수준별 활동",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "모든 학생: 같은 김밥 문제와 같은 문제 1–4를 풉니다."
+            },
+            {
+              "type": "table",
+              "headers": [
+                "",
+                "기초(가 모둠)",
+                "보통(나 모둠)",
+                "심화(다 모둠)"
+              ],
+              "rows": [
+                [
+                  "진입점",
+                  "구체물(김밥 띠 색칠) → 그림",
+                  "그림 → 수직선",
+                  "수직선 → 규칙 일반화"
+                ],
+                [
+                  "학생이 하는 일",
+                  "띠를 색칠해 비교한 뒤 문제 1은 칸 세기 안내와 함께 수직선에 표시",
+                  "띠 비교 후 문제 1–4를 스스로 푼다",
+                  "문제 1–4 후 단위분수가 계속 작아지는 규칙을 설명"
+                ],
+                [
+                  "학습지 과제",
+                  "김밥 문제, 문제 1(칸 세기 안내), 문제 2–4, 오늘의 정리, 분수 문제 만들기, 되돌아보기",
+                  "김밥 문제, 문제 1–4, 오늘의 정리, 분수 문제 만들기, 되돌아보기",
+                  "김밥 문제, 문제 1–4, 규칙 찾기, 오늘의 정리, 분수 문제 만들기, 되돌아보기"
+                ]
+              ]
+            },
+            {
+              "type": "callout",
+              "kind": "teacher-note",
+              "label": "수준별 예상되는 반응",
+              "text": "가: 1/8을 가장 크다고 쓴다 — 두 띠를 손가락으로 재게 한다. 나: 2/9와 7/9를 같다고 쓴다 — 수직선 칸을 세게 한다. 다: 1/100과 1/99의 차이가 '너무 작아 같다'고 쓴다 — 두 조각을 나란히 놓으면 어느 쪽이 긴지 묻는다."
+            }
+          ]
+        },
+        {
+          "heading": "형성 확인",
+          "blocks": [
+            {
+              "type": "labeled",
+              "label": "수업 중간 확인",
+              "text": "문제 2가 끝나면 세 모둠의 답을 훑는다. 7/9, 5/9, 2/9처럼 순서를 거꾸로 쓰거나 같다고 쓴 학생은 문제 3 전에 수직선으로 돌아간다."
+            },
+            {
+              "type": "from_shared",
+              "key": "exit_ticket"
+            },
+            {
+              "type": "from_shared",
+              "key": "exit_sort"
+            }
+          ]
+        },
+        {
+          "heading": "앵커 활동",
+          "blocks": [
+            {
+              "type": "from_shared",
+              "key": "anchor_activity"
+            },
+            {
+              "type": "labeled",
+              "label": "언제",
+              "text": "정리 문항을 먼저 낸 학생에게. 오개념을 판별하는 문제를 만들려면 규칙의 방향을 알아야 한다."
+            }
+          ]
+        },
+        {
+          "heading": "이 설계가 통하는 이유 (1)",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "기초 수준도 가장 어려운 단위분수 비교를 똑같이 만납니다. 빼는 대신 김밥 띠라는 구체적 진입점을 주어, 선수 개념인 '똑같이 나누기'에서 오늘의 비교로 올라가게 했습니다."
+            }
+          ]
+        },
+        {
+          "heading": "이 설계가 통하는 이유 (2)",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "심화 확장은 더 많은 문제가 아니라 규칙의 일반화입니다. 1/99와 1/100처럼 그림으로 그릴 수 없는 사례에서 규칙만으로 판단해야 하므로, 보통 수준이 하지 않는 새 사고를 요구합니다."
+            }
+          ]
+        },
+        {
+          "heading": "다음 단계",
+          "blocks": [
+            {
+              "type": "labeled",
+              "label": "이해함",
+              "text": "[4수01-15] 분모가 같은 분수의 덧셈과 뺄셈으로 넘어간다."
+            },
+            {
+              "type": "labeled",
+              "label": "거의",
+              "text": "까닭을 말하지 못한 학생을 모아 김밥 띠로 '왜 짧아지는지'만 다시 말하게 한다."
+            },
+            {
+              "type": "labeled",
+              "label": "재지도 필요",
+              "text": "[4수01-09]로 돌아가 종이 띠를 직접 접어 똑같이 나누는 활동부터 다시 한다."
+            }
+          ]
+        },
+        {
+          "heading": "출처 확인",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "성취기준 원문 끝에 붙어 온 다음 소주제 이름('소수')을 뺐습니다 — 학습맵 절취 결함. 공식 고시문과 대조해 확인하세요."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "worksheet_group_a",
+      "audience": "student",
+      "eyebrow": "초등학교 3학년 수학 · [4수01-11]",
+      "title": "가 모둠 — 누가 더 많이 먹었을까",
+      "meta": "이름: ____________________",
+      "sections": [
+        {
+          "heading": "낱말과 문장",
+          "blocks": [
+            {
+              "type": "from_shared",
+              "key": "vocabulary"
+            },
+            {
+              "type": "from_shared",
+              "key": "sentence_frames"
+            }
+          ]
+        },
+        {
+          "heading": "김밥 문제",
+          "blocks": [
+            {
+              "type": "group",
+              "blocks": [
+                {
+                  "type": "from_shared",
+                  "key": "anchor_task"
+                },
+                {
+                  "type": "from_shared",
+                  "key": "strip_3"
+                },
+                {
+                  "type": "from_shared",
+                  "key": "strip_5"
+                },
+                {
+                  "type": "from_shared",
+                  "key": "strips_note"
+                },
+                {
+                  "type": "answer_box",
+                  "ruled": false,
+                  "height_pt": 90
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "분수의 크기 비교하기",
+          "blocks": [
+            {
+              "type": "group",
+              "blocks": [
+                {
+                  "type": "from_shared",
+                  "key": "scaffold_a_p1"
+                },
+                {
+                  "type": "from_shared",
+                  "key": "p1",
+                  "label": "1"
+                },
+                {
+                  "type": "from_shared",
+                  "key": "fraction_line"
+                },
+                {
+                  "type": "answer_box",
+                  "ruled": false
+                }
+              ]
+            },
+            {
+              "type": "group",
+              "blocks": [
+                {
+                  "type": "from_shared",
+                  "key": "p2",
+                  "label": "2"
+                },
+                {
+                  "type": "answer_box",
+                  "ruled": false
+                }
+              ]
+            },
+            {
+              "type": "group",
+              "blocks": [
+                {
+                  "type": "from_shared",
+                  "key": "p3",
+                  "label": "3"
+                },
+                {
+                  "type": "answer_box",
+                  "ruled": false
+                }
+              ]
+            },
+            {
+              "type": "group",
+              "blocks": [
+                {
+                  "type": "from_shared",
+                  "key": "p4",
+                  "label": "4"
+                },
+                {
+                  "type": "answer_box",
+                  "ruled": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "오늘의 정리",
+          "blocks": [
+            {
+              "type": "from_shared",
+              "key": "exit_ticket"
+            },
+            {
+              "type": "answer_box",
+              "ruled": true
+            }
+          ]
+        },
+        {
+          "heading": "먼저 끝냈다면",
+          "blocks": [
+            {
+              "type": "from_shared",
+              "key": "anchor_activity"
+            },
+            {
+              "type": "answer_box",
+              "ruled": true
+            }
+          ]
+        },
+        {
+          "heading": "되돌아보기",
+          "blocks": [
+            {
+              "type": "from_shared",
+              "key": "reflect_prompt"
+            },
+            {
+              "type": "answer_box",
+              "ruled": true,
+              "height_pt": 70
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "worksheet_group_b",
+      "audience": "student",
+      "eyebrow": "초등학교 3학년 수학 · [4수01-11]",
+      "title": "나 모둠 — 누가 더 많이 먹었을까",
+      "meta": "이름: ____________________",
+      "sections": [
+        {
+          "heading": "낱말과 문장",
+          "blocks": [
+            {
+              "type": "from_shared",
+              "key": "vocabulary"
+            },
+            {
+              "type": "from_shared",
+              "key": "sentence_frames"
+            }
+          ]
+        },
+        {
+          "heading": "김밥 문제",
+          "blocks": [
+            {
+              "type": "group",
+              "blocks": [
+                {
+                  "type": "from_shared",
+                  "key": "anchor_task"
+                },
+                {
+                  "type": "from_shared",
+                  "key": "strip_3"
+                },
+                {
+                  "type": "from_shared",
+                  "key": "strip_5"
+                },
+                {
+                  "type": "from_shared",
+                  "key": "strips_note"
+                },
+                {
+                  "type": "answer_box",
+                  "ruled": false,
+                  "height_pt": 90
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "분수의 크기 비교하기",
+          "blocks": [
+            {
+              "type": "group",
+              "blocks": [
+                {
+                  "type": "from_shared",
+                  "key": "p1",
+                  "label": "1"
+                },
+                {
+                  "type": "from_shared",
+                  "key": "fraction_line"
+                },
+                {
+                  "type": "answer_box",
+                  "ruled": false
+                }
+              ]
+            },
+            {
+              "type": "group",
+              "blocks": [
+                {
+                  "type": "from_shared",
+                  "key": "p2",
+                  "label": "2"
+                },
+                {
+                  "type": "answer_box",
+                  "ruled": false
+                }
+              ]
+            },
+            {
+              "type": "group",
+              "blocks": [
+                {
+                  "type": "from_shared",
+                  "key": "p3",
+                  "label": "3"
+                },
+                {
+                  "type": "answer_box",
+                  "ruled": false
+                }
+              ]
+            },
+            {
+              "type": "group",
+              "blocks": [
+                {
+                  "type": "from_shared",
+                  "key": "p4",
+                  "label": "4"
+                },
+                {
+                  "type": "answer_box",
+                  "ruled": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "오늘의 정리",
+          "blocks": [
+            {
+              "type": "from_shared",
+              "key": "exit_ticket"
+            },
+            {
+              "type": "answer_box",
+              "ruled": true
+            }
+          ]
+        },
+        {
+          "heading": "먼저 끝냈다면",
+          "blocks": [
+            {
+              "type": "from_shared",
+              "key": "anchor_activity"
+            },
+            {
+              "type": "answer_box",
+              "ruled": true
+            }
+          ]
+        },
+        {
+          "heading": "되돌아보기",
+          "blocks": [
+            {
+              "type": "from_shared",
+              "key": "reflect_prompt"
+            },
+            {
+              "type": "answer_box",
+              "ruled": true,
+              "height_pt": 70
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "worksheet_group_c",
+      "audience": "student",
+      "eyebrow": "초등학교 3학년 수학 · [4수01-11]",
+      "title": "다 모둠 — 누가 더 많이 먹었을까",
+      "meta": "이름: ____________________",
+      "sections": [
+        {
+          "heading": "낱말과 문장",
+          "blocks": [
+            {
+              "type": "from_shared",
+              "key": "vocabulary"
+            },
+            {
+              "type": "from_shared",
+              "key": "sentence_frames"
+            }
+          ]
+        },
+        {
+          "heading": "김밥 문제",
+          "blocks": [
+            {
+              "type": "group",
+              "blocks": [
+                {
+                  "type": "from_shared",
+                  "key": "anchor_task"
+                },
+                {
+                  "type": "from_shared",
+                  "key": "strip_3"
+                },
+                {
+                  "type": "from_shared",
+                  "key": "strip_5"
+                },
+                {
+                  "type": "from_shared",
+                  "key": "strips_note"
+                },
+                {
+                  "type": "answer_box",
+                  "ruled": false,
+                  "height_pt": 90
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "분수의 크기 비교하기",
+          "blocks": [
+            {
+              "type": "group",
+              "blocks": [
+                {
+                  "type": "from_shared",
+                  "key": "p1",
+                  "label": "1"
+                },
+                {
+                  "type": "from_shared",
+                  "key": "fraction_line"
+                },
+                {
+                  "type": "answer_box",
+                  "ruled": false
+                }
+              ]
+            },
+            {
+              "type": "group",
+              "blocks": [
+                {
+                  "type": "from_shared",
+                  "key": "p2",
+                  "label": "2"
+                },
+                {
+                  "type": "answer_box",
+                  "ruled": false
+                }
+              ]
+            },
+            {
+              "type": "group",
+              "blocks": [
+                {
+                  "type": "from_shared",
+                  "key": "p3",
+                  "label": "3"
+                },
+                {
+                  "type": "answer_box",
+                  "ruled": false
+                }
+              ]
+            },
+            {
+              "type": "group",
+              "blocks": [
+                {
+                  "type": "from_shared",
+                  "key": "p4",
+                  "label": "4"
+                },
+                {
+                  "type": "answer_box",
+                  "ruled": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "더 나아가기",
+          "blocks": [
+            {
+              "type": "from_shared",
+              "key": "ext_c"
+            },
+            {
+              "type": "answer_box",
+              "ruled": true
+            }
+          ]
+        },
+        {
+          "heading": "오늘의 정리",
+          "blocks": [
+            {
+              "type": "from_shared",
+              "key": "exit_ticket"
+            },
+            {
+              "type": "answer_box",
+              "ruled": true
+            }
+          ]
+        },
+        {
+          "heading": "먼저 끝냈다면",
+          "blocks": [
+            {
+              "type": "from_shared",
+              "key": "anchor_activity"
+            },
+            {
+              "type": "answer_box",
+              "ruled": true
+            }
+          ]
+        },
+        {
+          "heading": "되돌아보기",
+          "blocks": [
+            {
+              "type": "from_shared",
+              "key": "reflect_prompt"
+            },
+            {
+              "type": "answer_box",
+              "ruled": true,
+              "height_pt": 70
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

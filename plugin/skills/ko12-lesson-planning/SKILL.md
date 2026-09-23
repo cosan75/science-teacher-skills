@@ -64,7 +64,8 @@ Teacher language only — name what the teacher is getting, never tool names, fi
    | 과학 | 현상, 실험·탐구, 물리·화학·생명과학·지구과학, 통합과학, 과학탐구실험, `[4과…]`·`[6과…]`·`[9과…]`·`[10통과…]` | `references/science.md` | ready |
    | 국어(초등) | 초1–6 국어 6영역 — 듣기·말하기·읽기·쓰기·문법·문학·매체, `[2국…]`·`[4국…]`·`[6국…]` | `references/korean.md` | ready |
    | 중·고 국어 | 중학교 국어, 공통국어1·2, 국어 선택 9과목, `[9국…]`·`[10공국…]`·`[12…]` | `references/korean-secondary.md` | planned |
-   | 수학 | 수와 연산, 변화와 관계, 도형과 측정, 자료와 가능성, `[2수…]`·`[4수…]`·`[6수…]`·`[9수…]` | `references/math.md` | planned |
+   | 수학(초등) | 초1–6 수학 — 수와 연산, 변화와 관계, 도형과 측정, 자료와 가능성, `[2수…]`·`[4수…]`·`[6수…]` | `references/math.md` | ready |
+   | 중·고 수학 | 중학교 수학, 공통수학, 수학 선택과목, `[9수…]`·`[10공수…]`·`[12…]` | `references/math-secondary.md` | planned |
    | 사회(초등) | 초3–6 사회 — 고장·지역, 국토, 역사 성격 영역, 민주주의·경제, `[4사…]`·`[6사…]` | `references/social.md` | ready |
    | 중·고 사회·역사 | 중학교 사회·역사, 통합사회, 한국사, 사회 선택과목, `[9사…]`·`[9역…]`·`[10통사…]`·`[10한사…]` | `references/social-secondary.md` | planned |
    | 도덕 | 자신·타인·사회·공동체·자연과의 관계, `[4도…]`·`[6도…]`·`[9도…]` | `references/ethics.md` | planned |
@@ -79,7 +80,7 @@ Teacher language only — name what the teacher is getting, never tool names, fi
 
    - **ready** → read that reference file NOW.
    - **planned** (파일이 아직 없음) → **범위 밖으로 처리한다.** 교사에게 알린다(예:
-     *"수학 수업 설계는 아직 준비 중이에요 — 지금은 과학, 초등 사회, 초등 국어 수업을 완전히 지원해요."*). 이 스킬
+     *"영어 수업 설계는 아직 준비 중이에요 — 지금은 과학과 초등 사회·국어·수학 수업을 완전히 지원해요."*). 이 스킬
      밖에서 일반 지식으로 돕는 것은 괜찮지만, 확인되지 않은 성취기준 코드는 인용하지 않고
      과학 레퍼런스를 다른 과목에 빌려 쓰지 않는다 — 과목 pedagogy가 다르다.
    - 레지스트리에 없는 과목 → planned와 같게 처리한다.
@@ -397,7 +398,7 @@ block types:
   {type: phase_header, name, minutes} | {type: cards, items[{title, text}]}
   {type: table|data_table, headers[]?, rows[[]]}
   {type: fill_table, headers[], blank_rows: int, row_height_pt?}
-  {type: number_line, min, max, ticks?, marks[]?}
+  {type: number_line, min, max, ticks?, marks[]?, labels?: "ends"}
   {type: source_card, title, author?, date?, origin?, excerpt}
   {type: answer_box, height_pt?, ruled?} | {type: page_break}
   {type: group, blocks[]} | {type: columns, left[], right[]}
@@ -426,7 +427,7 @@ printed on it.
 | `table` (no `headers`) | Term/definition pairs, label/value reference rows. |
 | `table` / `data_table` with `headers` | Real tabular data with column labels (misconceptions, scaffolds, the data set students analyze). `display: "large"` renders cells in big centered type — a word grid young students point to and read. |
 | `fill_table` | An organizer students write into — observation log, comparison grid, evidence collector. `rows` as a count gives blank rows; `rows` as a list mixes filled and blank — `[["cap","cape"], [], []]` shows a worked first row, then write-in space, and `[["Shell", "", ""]]` gives a labeled row with blank cells students write in (say what goes in the blank — a ✓, yes/no, a word — in the instruction line above). |
-| `number_line` | A drawn number line (`min`, `max`, `ticks`, optional `marks`). `ticks` omitted defaults to 10 evenly spaced segments; `ticks: 0` draws a bare line with only the `min`/`max` end labels and no tick marks, for students to partition themselves. |
+| `number_line` | A drawn number line (`min`, `max`, `ticks`, optional `marks`). `ticks` omitted defaults to 10 evenly spaced segments; `ticks: 0` draws a bare line with only the `min`/`max` end labels and no tick marks, for students to partition themselves. `labels: "ends"` keeps the tick marks but prints only the `min`/`max` values — for tasks where students locate a fraction or decimal on the line. |
 | `source_card` | A primary or secondary source excerpt students read: title/author/date + the excerpt text. |
 | `answer_box` | Writing space after a task. With no `height_pt` it sizes itself to the grade band (K-2 ~200pt, 3-5 ~150pt, 6-8 ~130pt, 9-12 ~115pt). K-5 boxes draw ruled handwriting lines; `ruled: true` draws lines at any grade — the surface for answers of composed sentences — and `ruled: false` gives open space for drawing or model-sketching. A task answered in a `fill_table` or on a `number_line` already has its surface. |
 | `group` | Keeps a task's prompt, stimulus, supports, and answer box together so a page break never separates them. |

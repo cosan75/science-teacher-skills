@@ -805,6 +805,19 @@ def emit_source_card(w, blk, theme):
                      "text": blk.get("excerpt") or blk.get("text") or ""}, theme)
 
 
+def _tick_label(lo_f, span, i, n):
+    """눈금 값 표기. 정수·짧은 소수는 그대로, 나누어떨어지지 않는 값(1/7 등)은 분수로 —
+    0.142857 같은 긴 소수가 초등 학습지에 찍히지 않게."""
+    from fractions import Fraction
+    v = lo_f + span * i / n
+    if abs(v - round(v, 2)) < 1e-9:
+        return f"{v:g}"
+    f = (Fraction(lo_f).limit_denominator(1000)
+         + Fraction(span).limit_denominator(1000) * Fraction(i, n))
+    whole, rem = divmod(f.numerator, f.denominator)
+    return f"{rem}/{f.denominator}" if whole == 0 else f"{whole} {rem}/{f.denominator}"
+
+
 def emit_number_line(w, blk, theme):
     """수직선을 1행 눈금표로 근사한다: 각 눈금 값이 셀 하나(위 괘선이 선 역할),
     marks는 그 위 행에 ▼와 라벨로 얹는다. HTML의 그린 수직선과 같은 정보를 담는다."""
@@ -814,6 +827,9 @@ def emit_number_line(w, blk, theme):
     except (TypeError, ValueError):
         ticks = None
     is_blank = ticks == 0
+    # labels: "ends" — 눈금은 긋되 값은 양 끝만 적는다(HTML 렌더러와 같은 모양). 분수 위치를
+    # 학생이 찾는 과제에서 눈금 값이 답을 대신 알려 주지 않게 한다.
+    ends_only = str(blk.get("labels", "")).lower() == "ends"
     n = 10 if ticks in (None, 0) else min(max(1, ticks), 20)
     marks = coerce_marks(blk.get("marks"))
     try:
@@ -831,10 +847,10 @@ def emit_number_line(w, blk, theme):
         near = [lab for mv, lab in marks if abs(mv - v) <= abs(span) / (2 * n)]
         mark_cells.append((_cell_paras("▼ " + (near[0] or "") if near else "",
                                        CH_BOLD, PP_CENTER) if near else [], BF_NONE))
-        if is_blank:
+        if is_blank or ends_only:
             txt = str(lo) if i == 0 else (str(hi) if i == n else "")
         else:
-            txt = f"{v:g}"
+            txt = _tick_label(lo_f, span, i, n)
         tick_cells.append((_cell_paras(txt, CH_BODY, PP_CENTER) if txt else [],
                            BF_RULE))
     rows = []
