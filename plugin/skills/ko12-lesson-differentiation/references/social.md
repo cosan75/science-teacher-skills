@@ -17,7 +17,7 @@ SPDX-License-Identifier: Apache-2.0
 # 사회 — 차별화 pedagogy
 
 `ko12-lesson-differentiation`에서 과목이 **초등 사회**(초3–6)일 때 로드된다 (SKILL.md 과목 레지스트리).
-중·고 사회·역사는 이 포크에서 아직 준비 중이다(planned) · 초1–2는 사회 교과가 없다.
+중·고 사회·역사는 이 포크에서 아직 준비 중이다(planned) · 초1–2는 사회 교과가 없다 — 통합교과(`references/integrated.md`)로 보낸다.
 
 ## 원본 수업 확인
 
