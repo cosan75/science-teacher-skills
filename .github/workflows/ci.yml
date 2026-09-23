@@ -50,7 +50,7 @@ jobs:
       # 파일럿 4종을 새로 렌더한 산출물에 건다.
       - name: 파일럿 수업 렌더 + DoD (4종)
         run: |
-          for p in elementary middle-school random-elementary urgent-middle-school; do
+          for p in elementary middle-school random-elementary urgent-middle-school magnet-poles; do
             bash plugin/skills/ko12-lesson-planning/scripts/render_all.sh \
               "pilot/$p/lesson.json" "/tmp/out-$p"
             python tests/check_lesson.py "pilot/$p/lesson.json" "/tmp/out-$p"
@@ -67,5 +67,5 @@ jobs:
         run: |
           python tests/check_hwpx_quality.py /tmp/ci-smoke \
             /tmp/out-elementary /tmp/out-middle-school \
-            /tmp/out-random-elementary /tmp/out-urgent-middle-school \
+            /tmp/out-random-elementary /tmp/out-urgent-middle-school /tmp/out-magnet-poles \
             /tmp/diff-elementary /tmp/diff-middle-school /tmp/diff-random-elementary
