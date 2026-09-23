@@ -37,7 +37,9 @@ ROW = re.compile(r"^\s*\|\s*([^|]+?)\s*\|[^|]*\|\s*`references/([^`]+\.md)`\s*\|
 
 def registry(skill: Path):
     text = (skill / "SKILL.md").read_text(encoding="utf-8")
-    start = text.index("| 과목 | 신호")
+    start = text.find("| 과목 | 신호")
+    if start < 0:
+        return "", []
     block = text[start:text.index("\n\n", start)]
     rows = [m.groups() for line in block.splitlines() if (m := ROW.match(line))]
     return block, rows
